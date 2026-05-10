@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ha! — Random Jokes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Ha<span>!</span></div>
+  <div class="header-meta">
+    <strong>The Daily Laugh</strong>
+    Jokes &amp; Wit · Est. 2026 By Samay Raina
+  </div>
+</header>
+
+<div class="dateline" id="dateline">Loading today's edition…</div>
+
+<main class="main">
+
+  <div class="controls">
+    <label for="type-filter">Filter</label>
+    <select id="type-filter">
+      <option value="all">All Types</option>
+      <option value="single">Single-liners</option>
+      <option value="twopart">Two-parters</option>
+    </select>
+
+    <label for="per-page">Show</label>
+    <select id="per-page">
+      <option value="6">6 jokes</option>
+      <option value="9" selected>9 jokes</option>
+      <option value="12">12 jokes</option>
+    </select>
+
+    <div class="divider"></div>
+    <span class="count-badge" id="count-badge">— jokes</span>
+    <button class="btn" id="refresh-btn">↻ Refresh</button>
+  </div>
+
+  <div id="jokes-section">
+    <div class="section-title">Today's Lineup</div>
+    <div id="jokes-container">
+      <div class="loading">
+        <div class="loading-text">Fetching the Funnies…</div>
+        <div class="loading-sub">Please stand by for comedy</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pagination" id="pagination"></div>
+
+  <div class="favorites-panel" id="fav-panel" style="display:none">
+    <div class="section-title">Your Favourites</div>
+    <div id="fav-container"></div>
+  </div>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+
+<script src="./index.js"></script>
+</body>
+</html>
